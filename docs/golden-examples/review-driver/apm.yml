@@ -1,0 +1,31 @@
+name: review-driver
+version: 0.1.0
+description: >-
+  Composed Review-to-Drive orchestrator — runs the review-panel on a
+  target PR, folds non-blocking findings as commits, pushes, and watches
+  CI to green. The advanced driver skill from the Agentic SDLC track.
+author: workshop-participant
+license: MIT
+type: skill
+
+# COMPOSITION MECHANIC — this is the lesson of the Agentic SDLC track.
+#
+# The dependency edge below declares that review-driver COMPOSES the
+# review-panel skill. When a consumer runs `apm install` on this
+# driver, the resolver follows the edge and deploys review-panel
+# alongside it — personas, schemas, templates, evals, everything.
+#
+# The lockfile (apm.lock.yaml) pins the exact version of review-panel
+# that was tested with this driver, so consumers get a reproducible,
+# auditable closure. This is ch22's "lockfile-pinned skill dependency
+# graph": the same mechanism that makes `npm install express` deploy
+# express + its 57 transitive dependencies at pinned versions.
+#
+# Local-path keys resolve relative to THIS package's directory
+# (the apm dependency resolution anchor rule), hence `../review-panel`.
+# In a published registry the path would be replaced by a versioned
+# package reference (e.g. `@org/review-panel@^0.1.0`).
+dependencies:
+  apm:
+    - ../review-panel
+  mcp: []

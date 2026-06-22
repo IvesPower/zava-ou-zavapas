@@ -1,0 +1,27 @@
+{
+  "description": "Trigger evals for the review-panel skill dispatch description. 6 should-trigger + 6 should-NOT-trigger. 50/50 train/val split. Validation split is the ship gate.",
+  "should_trigger": {
+    "train": [
+      "run the review panel on this PR",
+      "do a multi-persona review of PR #42",
+      "panel-review this pull request before merge"
+    ],
+    "val": [
+      "get correctness + security + test-coverage review on this PR",
+      "have the review panel give a recommendation on this change",
+      "i need a cross-cutting expert review of this PR"
+    ]
+  },
+  "should_not_trigger": {
+    "train": [
+      "give me a quick code review of this file",
+      "what does the security reviewer think about XSS",
+      "fix the lint errors in src/"
+    ],
+    "val": [
+      "explain how the checkout flow works",
+      "summarize the diff of PR #42",
+      "draft a PR description for this branch"
+    ]
+  }
+}

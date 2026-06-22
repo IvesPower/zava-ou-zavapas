@@ -1,0 +1,115 @@
+lockfile_version: '1'
+generated_at: '2026-06-17T14:09:53.025562+00:00'
+apm_version: 0.20.0
+dependencies:
+- repo_url: DevExpGbb/genesis
+  host: github.com
+  resolved_commit: 16a5027d6cdc23c0fd9df21f65e21fa0f681d722
+  resolved_ref: v0.1.0
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/genesis
+  - .agents/skills/genesis/SKILL.md
+  - .agents/skills/genesis/agents/genesis-architect.agent.md
+  - .agents/skills/genesis/assets/architectural-patterns.md
+  - .agents/skills/genesis/assets/composition-substrate.md
+  - .agents/skills/genesis/assets/design-patterns.md
+  - .agents/skills/genesis/assets/mermaid-conventions.md
+  - .agents/skills/genesis/assets/module-system-adapters/apm.md
+  - .agents/skills/genesis/assets/pattern-tradeoffs.md
+  - .agents/skills/genesis/assets/primitives.md
+  - .agents/skills/genesis/assets/refactor-patterns.md
+  - .agents/skills/genesis/assets/runtime-affordances/common.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-harness/claude-code.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-harness/codex.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-harness/copilot.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-harness/cursor.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-harness/opencode.md
+  - .agents/skills/genesis/assets/runtime-affordances/per-trigger-surface/gh-aw.md
+  - .agents/skills/genesis/assets/runtime-affordances/portability-rules.md
+  - .agents/skills/genesis/examples/01-readme-iteration.md
+  - .agents/skills/genesis/examples/02-review-panel-architecture.md
+  - .agents/skills/genesis/examples/03-release-notes-single-skill.md
+  - .agents/skills/genesis/examples/04-pr-review-advisory.md
+  - .agents/skills/genesis/examples/05-pr-review-verdict.md
+  - .agents/skills/genesis/examples/README.md
+  deployed_file_hashes:
+    .agents/skills/genesis/SKILL.md: sha256:766a08cd32988e21863c78545d1c2a8ff5213f2a8528cd80263ded48dee7ca60
+    .agents/skills/genesis/agents/genesis-architect.agent.md: sha256:5b360163a13dfe720f1db14367844406655ed691928587f66c784831bf84e56f
+    .agents/skills/genesis/assets/architectural-patterns.md: sha256:eaab5c89a0446f7d0fd206fd35704a8064a7f002bbb13a9a5d45ed691a6a1b76
+    .agents/skills/genesis/assets/composition-substrate.md: sha256:2b24d0f13eea7a705f5d1b8904cbb5116c34bc008d40a48082cdf430f3dc354a
+    .agents/skills/genesis/assets/design-patterns.md: sha256:56ac305d664a630ce7c0e801d4f2434946c5bfa818cd7f6dc1b9d83814c2f16b
+    .agents/skills/genesis/assets/mermaid-conventions.md: sha256:e87d19f79eb696213dce08c92a60da5c552bf0ebe6485c306d7352acce474523
+    .agents/skills/genesis/assets/module-system-adapters/apm.md: sha256:da5557656ab329845d12604eac333c885a36661f0c12c7d94542b33c8f373999
+    .agents/skills/genesis/assets/pattern-tradeoffs.md: sha256:7b0eab205e0f0d4be1e5a97845840021dc5a6222a6233ed1b4c1198ac9b57f8a
+    .agents/skills/genesis/assets/primitives.md: sha256:2b1e41147f465b28a16b1cff32f0abf464402db035c2d581e65ebc1ab705ba87
+    .agents/skills/genesis/assets/refactor-patterns.md: sha256:0b00fff233937ec261d1ceb72205b9b625fd3d8fe4db04f61a6597788548e570
+    .agents/skills/genesis/assets/runtime-affordances/common.md: sha256:e7108e692e3f356a5423f564a5e509ebc6f8a08d569a6c44bf8e5746965ef1a1
+    .agents/skills/genesis/assets/runtime-affordances/per-harness/claude-code.md: sha256:ddc233461e45bbab1e6c95d4eb39a796aedf4637de4818b013b9a9bf50f0ba34
+    .agents/skills/genesis/assets/runtime-affordances/per-harness/codex.md: sha256:b18819eacdb5594dea44c543c54903bb9b16c1e654be3eff577d0a00a91e7b34
+    .agents/skills/genesis/assets/runtime-affordances/per-harness/copilot.md: sha256:1d11a1518c3569831e4c978214c1fbdcb22c7c6edadacfca9060cfdeb7d47864
+    .agents/skills/genesis/assets/runtime-affordances/per-harness/cursor.md: sha256:4013668a25b41c409b64edf16fe8ee1c46137541036c78137822e20872a62a3b
+    .agents/skills/genesis/assets/runtime-affordances/per-harness/opencode.md: sha256:c81ff52edea80c0a0d24736ca0f9b352271f552387ad247888ce0e43c2bfbd71
+    .agents/skills/genesis/assets/runtime-affordances/per-trigger-surface/gh-aw.md: sha256:774132a577567ab35b0bd951af8d6ebebbb471fbbc4b2330f09a3db6102909af
+    .agents/skills/genesis/assets/runtime-affordances/portability-rules.md: sha256:49b787e57a987ff3b11dacb2d7d5803deb5296f67e78d69f1c980270f8e6d96f
+    .agents/skills/genesis/examples/01-readme-iteration.md: sha256:faf4c3905829f91ca9c7331636672c86c1dea5f89e6462546f39963f0146a14b
+    .agents/skills/genesis/examples/02-review-panel-architecture.md: sha256:2de53dbc41ad6fe1d75dd6b5cdef8a712b3db5c20c19de2e9de37c1bd8ce8372
+    .agents/skills/genesis/examples/03-release-notes-single-skill.md: sha256:0c3cd11853c001698127c0ec459ab160ccbbd92693b4af3ba00f38dc66c14dd7
+    .agents/skills/genesis/examples/04-pr-review-advisory.md: sha256:95357a340e935eb8b0d6371f1f4b387222e102013c6da1896009b2c65cbaf155
+    .agents/skills/genesis/examples/05-pr-review-verdict.md: sha256:0f9c455e60ef7a2b05b82b58f65a22349aa858b2cb68fe381b3e59f157f031ec
+    .agents/skills/genesis/examples/README.md: sha256:b2acc15f7533aa601dc832662df98710162149a63e2210f7da9d148f4a386b91
+  content_hash: sha256:4f28e525c755aa538ed7aabd8e69cdd14c62c57b19cbfc37ddca5b0707f34730
+- repo_url: DevExpGbb/zava-agent-config
+  host: github.com
+  resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
+  resolved_ref: v5.0.1
+  virtual_path: plugins/code-kit
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .github/agents/architect.agent.md
+  deployed_file_hashes:
+    .github/agents/architect.agent.md: sha256:de74154b914769a13b4dc594f998db0e745280f8890af1ca526f10b10d0ecc5a
+  content_hash: sha256:bdc7b315617afd469e35e2f6b6bcf6712df57298ab9b8a398877e2f744b8ce62
+- repo_url: DevExpGbb/zava-agent-config
+  host: github.com
+  resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
+  resolved_ref: v5.0.1
+  virtual_path: plugins/ideate-kit
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .agents/skills/meeting-to-issue
+  - .agents/skills/meeting-to-issue/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/meeting-to-issue/SKILL.md: sha256:6b79d3bf93e42eeed5543adbd52566abf9f5b81d4bac3fc8f298eb8c39ee5a27
+  content_hash: sha256:5d7ac2f6095e67162b16fb92aa8200d247a68ff42dda7f8e52d844073eaa8863
+- repo_url: DevExpGbb/zava-agent-config
+  host: github.com
+  resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
+  resolved_ref: v5.0.1
+  virtual_path: plugins/review-kit
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .agents/skills/panel-review
+  - .agents/skills/panel-review/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/panel-review/SKILL.md: sha256:8e33b93b22e9f7eaa589d22012e220310f7897aa846936c9d5ea5eec04640b15
+  content_hash: sha256:9da1799dbef457f121865aef79dfcdc6efead654030f03047b7a62bf0c8af1d7
+- repo_url: DevExpGbb/zava-agent-config
+  host: github.com
+  resolved_commit: 7a12679a9e1f55e06d16616ed0244b5fdeaad3da
+  resolved_ref: v5.0.1
+  virtual_path: plugins/secure-baseline
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .github/agents/security.agent.md
+  - .github/instructions/docs-style-guide.instructions.md
+  - .github/instructions/secure-coding-base.instructions.md
+  deployed_file_hashes:
+    .github/agents/security.agent.md: sha256:8092bef9ff98c66251754d33e9b241f4f25293578b31e258cee88124c80590c1
+    .github/instructions/docs-style-guide.instructions.md: sha256:cad1b1161ef8d53e08038302b6c8cd14dbc03f75fa7ec267edf3d1f07824a739
+    .github/instructions/secure-coding-base.instructions.md: sha256:f0a32226b87082a4e4cad08a070e55c177e23e0ef728329973634c84c3a81d14
+  content_hash: sha256:10e2277dfb0a1e32bd833be73ba5c964c4b64334eb325a1b1a7338d4db0a6855

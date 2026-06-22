@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "panelist-return-schema.json",
+  "title": "Review Panel - Panelist Return Shape (advisory regime)",
+  "description": "Shape every panel persona MUST return. Single findings array with explicit severity. There is NO binary verdict; the orchestrator does not compute APPROVE/REJECT. Severity expresses signal strength; the synthesizer arbitrates and the human reviewer ships.",
+  "type": "object",
+  "required": ["persona", "findings", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "persona": {
+      "type": "string",
+      "description": "Persona slug. MUST equal the persona .md filename stem.",
+      "enum": [
+        "correctness-reviewer",
+        "security-reviewer",
+        "test-coverage-reviewer"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "description": "Findings raised by this persona, ordered by signal strength (most important first). Empty array means no concerns from this lens.",
+      "items": { "$ref": "#/definitions/finding" }
+    },
+    "summary": {
+      "type": "string",
+      "description": "One-line takeaway from this persona. Under 200 chars. Required even when findings is empty (e.g. 'No concerns from this lens; ship.')."
+    }
+  },
+  "definitions": {
+    "finding": {
+      "type": "object",
+      "required": ["title", "severity", "detail"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "One-line description of the finding."
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["blocking", "recommended", "nit"],
+          "description": "blocking: a correctness regression, security bypass, or fault that compounds. Use sparingly with explicit evidence. recommended: a worthwhile improvement the author should weigh; default for substantive feedback. nit: one-line polish; trivially skippable."
+        },
+        "detail": {
+          "type": "string",
+          "description": "WHY this matters. Cite the rule, pattern, or invariant violated."
+        },
+        "file": {
+          "type": "string",
+          "description": "Optional repo-relative path to the file."
+        },
+        "line": {
+          "type": "integer",
+          "description": "Optional line number."
+        }
+      }
+    }
+  }
+}
