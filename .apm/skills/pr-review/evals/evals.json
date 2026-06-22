@@ -1,0 +1,85 @@
+{
+  "skill": "pr-review",
+  "version": "1.0.0",
+  "content_evals": [
+    {
+      "id": "ce1",
+      "description": "SQL injection in route handler",
+      "prompt": "Review PR #7. The diff adds this in app/api/products/route.ts line 42: const result = await db.query(`SELECT * FROM products WHERE id = '${id}'`)",
+      "expected_with_skill": {
+        "verdict": "REQUEST CHANGES",
+        "must_contain": [
+          "app/api/products/route.ts",
+          "42",
+          "blocker|high",
+          "SQL"
+        ]
+      },
+      "expected_without_skill": "Likely a vague comment about SQL injection with no file/line reference and no structured verdict table",
+      "delta": "Structured BLOCKER finding at exact file:line vs informal comment"
+    },
+    {
+      "id": "ce2",
+      "description": "Architecture violation: lib/ importing Next.js",
+      "prompt": "Review PR #12. The diff adds `import { NextResponse } from 'next/server'` at the top of lib/orders.ts (line 1).",
+      "expected_with_skill": {
+        "verdict": "REQUEST CHANGES",
+        "must_contain": [
+          "lib/orders.ts",
+          "1",
+          "blocker|high",
+          "next/"
+        ]
+      },
+      "expected_without_skill": "May or may not catch; no consistent structure; no guideline rule reference",
+      "delta": "Guideline rule-cited structured finding vs informal or missed"
+    },
+    {
+      "id": "ce3",
+      "description": "Missing JSDoc on new exported function",
+      "prompt": "Review PR #3. The diff adds `export async function applyPromoCode(db: Db, code: string): Promise<number>` in lib/promo.ts at line 14 with no JSDoc comment above it.",
+      "expected_with_skill": {
+        "verdict": "REQUEST CHANGES",
+        "must_contain": [
+          "lib/promo.ts",
+          "14",
+          "medium|high",
+          "JSDoc"
+        ]
+      },
+      "expected_without_skill": "May miss entirely or give informal comment without line reference or consistent output format",
+      "delta": "Consistent structured output with file:line vs ad-hoc or missed"
+    }
+  ],
+  "trigger_evals": {
+    "description": "~20 queries split 60/40 train/val. Val gate: >=50% should-trigger correct AND <50% should-not-trigger fired.",
+    "should_trigger_train": [
+      "review PR #42",
+      "is this PR ready to merge?",
+      "check this pull request",
+      "can you review the diff in PR #5?",
+      "does this PR follow our team guidelines?",
+      "look at PR #8 and tell me if it is good to ship"
+    ],
+    "should_trigger_val": [
+      "check this change for security issues",
+      "does PR #12 respect our architecture principles?",
+      "I opened a PR, can you review it?",
+      "review the code changes in this PR against our standards"
+    ],
+    "should_not_trigger_train": [
+      "how do I create a pull request?",
+      "what is the diff between main and my branch?",
+      "run the tests for this branch",
+      "fix the linting errors in my code",
+      "summarize the changes in UserController.ts",
+      "commit my changes and push"
+    ],
+    "should_not_trigger_val": [
+      "what does git rebase mean?",
+      "write unit tests for this function",
+      "update the README with the new API",
+      "explain this TypeScript error"
+    ]
+  }
+}
